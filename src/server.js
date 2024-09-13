@@ -41,7 +41,7 @@ const productRoute = require("./routes/products");
 
 // Assign Routes
 app.use(cors({
-  origin: 'http://localhost:5173', // Your React app's URL
+  origin: 'https://qless.vercel.app/', // Your React app's URL
   credentials: true,
 }));
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
