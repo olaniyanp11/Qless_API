@@ -41,9 +41,12 @@ const productRoute = require("./routes/products");
 
 // Assign Routes
 app.use(cors({
-  origin: 'https://qless.vercel.app/', // Your React app's URL
+  origin: 'https://qless.vercel.app',
+  methods: 'GET,POST,PUT,DELETE', // Allow all necessary methods
+  allowedHeaders: 'Content-Type,Authorization', // Allow common headers
   credentials: true,
 }));
+
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.use("/user", userRoute);
